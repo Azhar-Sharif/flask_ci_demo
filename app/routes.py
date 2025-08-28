@@ -12,6 +12,7 @@ def sum_numbers():
         a = float(request.form.get("a", 0))
         b = float(request.form.get("b", 0))
         result = a + b
+        print("function called")
         return render_template("index.html", result=result, a=a, b=b)
     except ValueError:
         return render_template("index.html", error="Invalid input")
