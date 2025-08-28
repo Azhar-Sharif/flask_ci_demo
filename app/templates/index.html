@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flask CI Demo</title>
+</head>
+<body>
+  <h1>Flask CI Demo</h1>
+  <form action="/sum" method="POST">
+    <input type="number" step="any" name="a" placeholder="Enter first number" required>
+    <input type="number" step="any" name="b" placeholder="Enter second number" required>
+    <button type="submit">Add</button>
+  </form>
+
+  {% if result is defined %}
+    <p>Result: {{ a }} + {{ b }} = <strong>{{ result }}</strong></p>
+  {% endif %}
+
+  {% if error is defined %}
+    <p style="color:red;">{{ error }}</p>
+  {% endif %}
+</body>
+</html>
